@@ -1,0 +1,46 @@
+/* 
+This style sheet can be used for reference
+but not for an assignment.
+*/
+
+/* Center the body in the middle of the viewport 
+by defining min and max widths with auto right/left margins
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3%
+}
+
+/* PAGE LAYOUT 
+Consistant design for each page layout block. 
+*/
+header, main, article, footer {
+}
+
+/* NAVIGATION
+Simple changes to make anchors look like buttons. 
+*/
+nav {
+    margin: 5px;
+}
+nav a {
+    padding: 5px;
+}
+nav a:hover {}
+
+/* TABLE */
+table {}
+caption {}
+tr td, td th {}
+tr:nth-child(even){}
+th {}
+
+
+/* FORM */
+fieldset {}
+legend {}
+label {}
+input {}
+button {}
+button:hover {}
+

@@ -1,17 +1,17 @@
 import "dotenv/config";
 import express from "express";
-import * as movies from "./movies-model.mjs";
+import * as exercises from "./exercises-model.mjs";
 
 const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 
 // CREATE controller ******************************************
-app.post("/movies", (req, res) => {
-    movies
-        .createMovie(req.body.title, req.body.year, req.body.language)
-        .then((movie) => {
-            res.status(201).json(movie);
+app.post("/exercises", (req, res) => {
+    exercises
+        .createExercise(req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
+        .then((exercise) => {
+            res.status(201).json(exercise);
         })
         .catch((error) => {
             console.log(error);
@@ -20,14 +20,14 @@ app.post("/movies", (req, res) => {
 });
 
 // RETRIEVE controller ****************************************************
-// GET movies by ID
-app.get("/movies/:_id", (req, res) => {
-    const movieId = req.params._id;
-    movies
-        .findMovieById(movieId)
-        .then((movie) => {
-            if (movie !== null) {
-                res.json(movie);
+// GET exercises by ID
+app.get("/exercises/:_id", (req, res) => {
+    const exerciseId = req.params._id;
+    exercises
+        .findExerciseById(exerciseId)
+        .then((exercise) => {
+            if (exercise !== null) {
+                res.json(exercise);
             } else {
                 res.status(404).json({ Error: "Document not found" });
             }
@@ -38,30 +38,30 @@ app.get("/movies/:_id", (req, res) => {
 });
 
 // GET movies filtered by year or language
-app.get("/movies", (req, res) => {
-    let filter = {};
-    // filter by year
-    if (req.query.year !== undefined) {
-        filter = { year: req.query.year };
-    }
-    // filter by language
-    if (req.query.language !== undefined) {
-        filter = { language: req.query.language };
-    }
-    movies
-        .findMovies(filter, "", 0)
-        .then((movies) => {
-            res.send(movies);
-        })
-        .catch((error) => {
-            console.error(error);
-            res.send({ Error: "Request to retrieve documents failed" });
-        });
-});
+// app.get("/exercises", (req, res) => {
+//     let filter = {};
+//     // filter by year
+//     if (req.query.year !== undefined) {
+//         filter = { year: req.query.year };
+//     }
+//     // filter by language
+//     if (req.query.language !== undefined) {
+//         filter = { language: req.query.language };
+//     }
+//     movies
+//         .findMovies(filter, "", 0)
+//         .then((movies) => {
+//             res.send(movies);
+//         })
+//         .catch((error) => {
+//             console.error(error);
+//             res.send({ Error: "Request to retrieve documents failed" });
+//         });
+// });
 
 // DELETE Controller ******************************
-app.delete("/movies/:_id", (req, res) => {
-    movies
+app.delete("/exercises/:_id", (req, res) => {
+    exercises
         .deleteById(req.params._id)
         .then((deletedCount) => {
             if (deletedCount === 1) {
@@ -77,17 +77,19 @@ app.delete("/movies/:_id", (req, res) => {
 });
 
 // UPDATE controller ************************************
-app.put("/movies/:_id", (req, res) => {
-    movies
-        .replaceMovie(req.params._id, req.body.title, req.body.year, req.body.language)
+app.put("/exercises/:_id", (req, res) => {
+    exercises
+        .replaceMovie(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
 
         .then((numUpdated) => {
             if (numUpdated === 1) {
                 res.json({
                     _id: req.params._id,
-                    title: req.body.title,
-                    year: req.body.year,
-                    language: req.body.language,
+                    name: name,
+                    reps: reps,
+                    weight: weight,
+                    unit: unit,
+                    date: date,
                 });
             } else {
                 res.status(404).json({ Error: "Document not found" });

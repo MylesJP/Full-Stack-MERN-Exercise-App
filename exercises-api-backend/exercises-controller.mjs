@@ -37,27 +37,27 @@ app.get("/exercises/:_id", (req, res) => {
         });
 });
 
-// GET movies filtered by year or language
-// app.get("/exercises", (req, res) => {
-//     let filter = {};
-//     // filter by year
-//     if (req.query.year !== undefined) {
-//         filter = { year: req.query.year };
-//     }
-//     // filter by language
-//     if (req.query.language !== undefined) {
-//         filter = { language: req.query.language };
-//     }
-//     movies
-//         .findMovies(filter, "", 0)
-//         .then((movies) => {
-//             res.send(movies);
-//         })
-//         .catch((error) => {
-//             console.error(error);
-//             res.send({ Error: "Request to retrieve documents failed" });
-//         });
-// });
+// GET exercises filtered by year or language
+app.get("/exercises", (req, res) => {
+    let filter = {};
+    // filter by name
+    // if (req.query.name !== undefined) {
+    //     filter = { name: req.query.name };
+    // }
+    // // filter by reps
+    // if (req.query.language !== undefined) {
+    //     filter = { language: req.query.language };
+    // }
+    exercises
+        .findExercises(filter, "", 0)
+        .then((exercises) => {
+            res.send(exercises);
+        })
+        .catch((error) => {
+            console.error(error);
+            res.send({ Error: "Request to retrieve documents failed" });
+        });
+});
 
 // DELETE Controller ******************************
 app.delete("/exercises/:_id", (req, res) => {

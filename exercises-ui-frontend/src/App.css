@@ -52,11 +52,28 @@ a:visited {}
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
-    background-color: var(--light-background);
+    background-color: var(--light-steel-blue);
     color: var(--dark-background);
     text-align: center;
+    padding: 20px;
 }
-nav a {}
+
+nav a {
+    background-color: var(--light-background);
+    color:var(--dark-background);
+    text-decoration: none;
+    margin: 30px;
+    padding: 8px 20px;
+    font-weight: bold
+}
+
+nav a:visited {
+    color:#1D2126;
+}
+
+nav a:hover {
+    background-color: #E8E8E8;
+}
 
 /*  ----- Page layout blocks -----  */
 header {
@@ -71,6 +88,7 @@ main {
     color: var(--dark-background);
     align-items: center;
     text-align: center;
+    padding-top: 15px;
 }
 section {}
   article {}

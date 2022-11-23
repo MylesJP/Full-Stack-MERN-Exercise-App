@@ -31,7 +31,7 @@ export const AddExercisePage = () => {
         <>
             <article>
                 <h2>Add to the collection</h2>
-                <p>Paragraph about this page.</p>
+                <p>Add a weight, bodyweight, or cardio exercise below.</p>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -49,7 +49,7 @@ export const AddExercisePage = () => {
                             required
                         />
 
-                        <label for="reps">Number of reps</label>
+                        <label for="reps">Reps</label>
                         <input
                             type="number"
                             value={reps}
@@ -57,9 +57,11 @@ export const AddExercisePage = () => {
                             onChange={(e) => setReps(e.target.value)}
                             id="reps"
                             required
+                            default="1"
+                            min="1"
                         />
 
-                        <label for="weight">Weight</label>
+                        <label for="weight">Weight/Time</label>
                         <input
                             type="number"
                             placeholder="Weight"
@@ -67,17 +69,28 @@ export const AddExercisePage = () => {
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"
                             required
+                            default="1"
+                            min="1"
                         />
 
                         <label for="unit">Unit</label>
-                        <input
+                        <select
                             type="text"
                             placeholder="Unit"
                             value={unit}
                             onChange={(e) => setUnit(e.target.value)}
                             id="unit"
                             required
-                        />
+                        >
+                            <option value="lb" selected>
+                                lb
+                            </option>
+                            <option value="kg">kg</option>
+                            <option value="min">min</option>
+                            <option value="km">km</option>
+                            <option value="mi">mi</option>
+                            <option value="count">count</option>
+                        </select>
 
                         <label for="date">Date</label>
                         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" required />

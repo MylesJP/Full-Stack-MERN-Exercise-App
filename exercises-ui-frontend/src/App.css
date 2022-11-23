@@ -1,46 +1,201 @@
-/* 
-This style sheet can be used for reference
-but not for an assignment.
-*/
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
 
-/* Center the body in the middle of the viewport 
-by defining min and max widths with auto right/left margins
-*/
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 3%
+
+/*   ----- Imports  -----  */
+          /* Add fonts from the app's server 
+@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} 
+          */                           
+
+          /* ...or hosted services like Google Fonts 
+@import url(//fonts.googleapis.com/css?family=Font+Name);
+          */
+
+          @import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*   ----- Variables  -----  */
+:root {
+  --dark-background: #1D2126;
+  --steel-blue: #68868C;
+  --light-steel-blue: #A8BBBF;
+  --light-background: #F2F2F2;
+  --accent-green: #A6A08D;
 }
 
-/* PAGE LAYOUT 
-Consistant design for each page layout block. 
-*/
-header, main, article, footer {
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  color: var(--light-background);
+  background-color: var(--dark-background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:;
+  margin: 5%;
+  padding:;
 }
 
-/* NAVIGATION
-Simple changes to make anchors look like buttons. 
-*/
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
-    margin: 5px;
+    background-color: var(--light-background);
+    color: var(--dark-background);
+    text-align: center;
 }
-nav a {
-    padding: 5px;
-}
-nav a:hover {}
+nav a {}
 
-/* TABLE */
+/*  ----- Page layout blocks -----  */
+header {
+     background-color: var(--steel-blue);
+     color: var(--light-background);
+     text-align: center;
+     line-height: 15px;
+     padding: 10px;
+}
+main {
+    background-color: var(--light-background);
+    color: var(--dark-background);
+    align-items: center;
+    text-align: center;
+}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+footer {}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {} /* Define consistant font family.*/
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
 table {}
 caption {}
-tr td, td th {}
-tr:nth-child(even){}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
 th {}
+td {}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
 
 
-/* FORM */
+/*  ----- Form ----- */
+form {}
 fieldset {}
-legend {}
+  legend {}
 label {}
-input {}
-button {}
-button:hover {}
+  button {}
+  input {}
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
 
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}

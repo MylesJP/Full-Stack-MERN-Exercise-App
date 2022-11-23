@@ -20,8 +20,8 @@ function App() {
         <>
             <Router>
                 <header>
-                    <h1>Collection of Exercises</h1>
-                    <p>This app uses MERN. Type more stuff here.</p>
+                    <h1>Exercise Tracker</h1>
+                    <p>Track your exercises with this MERN app!</p>
                 </header>
 
                 <Navigation />

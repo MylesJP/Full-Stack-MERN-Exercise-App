@@ -9,7 +9,7 @@ function ExerciseList({ exercises, onDelete, onEdit }) {
                 <tr>
                     <th>Name</th>
                     <th>Reps</th>
-                    <th>Weight</th>
+                    <th>Weight/Time</th>
                     <th>Unit</th>
                     <th>Date</th>
                 </tr>

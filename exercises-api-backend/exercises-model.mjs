@@ -21,7 +21,7 @@ const exerciseSchema = mongoose.Schema({
     reps: { type: Number, required: true },
     weight: { type: Number, required: true },
     unit: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: Date, required: true, min: '011-21-2022', default: new Date() },
 });
 
 // Compile the model from the schema.

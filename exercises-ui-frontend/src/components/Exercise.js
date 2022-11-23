@@ -8,7 +8,7 @@ function Exercise({ exercise, onEdit, onDelete }) {
             <td>{exercise.reps}</td>
             <td>{exercise.weight}</td>
             <td>{exercise.unit}</td>
-            <td>{exercise.date}</td>
+            <td>{exercise.date.toLocaleString("en-US").slice(0, 10)}</td>
             <td><MdDeleteForever onClick={() => onDelete(exercise._id)} /></td>
             <td><MdEdit onClick={() => onEdit(exercise)} /></td>
         </tr>

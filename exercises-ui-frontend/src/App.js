@@ -41,7 +41,7 @@ function App() {
                 </main>
 
                 <footer>
-                    <p>Copyright statement</p>
+                    <p>Myles Penner © 2022</p>
                 </footer>
             </Router>
         </>

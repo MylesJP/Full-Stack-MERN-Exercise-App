@@ -37,17 +37,9 @@ app.get("/exercises/:_id", (req, res) => {
         });
 });
 
-// GET exercises filtered by year or language
+// GET exercises filtered by name
 app.get("/exercises", (req, res) => {
     let filter = {};
-    // filter by name
-    // if (req.query.name !== undefined) {
-    //     filter = { name: req.query.name };
-    // }
-    // // filter by reps
-    // if (req.query.language !== undefined) {
-    //     filter = { language: req.query.language };
-    // }
     exercises
         .findExercises(filter, "", 0)
         .then((exercises) => {
@@ -79,17 +71,17 @@ app.delete("/exercises/:_id", (req, res) => {
 // UPDATE controller ************************************
 app.put("/exercises/:_id", (req, res) => {
     exercises
-        .replaceMovie(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
+        .replaceExercise(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
 
         .then((numUpdated) => {
             if (numUpdated === 1) {
                 res.json({
                     _id: req.params._id,
-                    name: name,
-                    reps: reps,
-                    weight: weight,
-                    unit: unit,
-                    date: date,
+                    name: req.body.name,
+                    reps: req.body.reps,
+                    weight: req.body.weight,
+                    unit: req.body.unit,
+                    date: req.body.date,
                 });
             } else {
                 res.status(404).json({ Error: "Document not found" });

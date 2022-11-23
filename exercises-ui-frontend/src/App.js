@@ -1,54 +1,51 @@
 // Import dependencies
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { useState } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useState } from "react";
 
 // Import Components, styles, media
-import Navigation from './components/Navigation';
-import './App.css';
+import Navigation from "./components/Navigation";
+import "./App.css";
 
 // Import Pages
-import HomePage from './pages/HomePage';
-import AddMoviePage from './pages/AddMoviePage';
-import EditMoviePage from './pages/EditMoviePage';
+import HomePage from "./pages/HomePage";
+import AddExercisePage from "./pages/AddExercisePage";
+import EditExercisePage from "./pages/EditExercisePage";
 
 // Define the function that renders the content in routes using State.
 function App() {
+    const [exercise, setExercise] = useState([]);
 
-  const [movie, setMovie] = useState([]);
+    return (
+        <>
+            <Router>
+                <header>
+                    <h1>Collection of Exercises</h1>
+                    <p>This app uses MERN. Type more stuff here.</p>
+                </header>
 
-  return (
-    <>
-      <Router>
+                <Navigation />
 
-          <header>
-            <h1>Collection of Movies</h1>
-            <p>This app uses MERN.</p>
-          </header>
+                <main>
+                    <Route path="/" exact>
+                        <HomePage setExercise={setExercise} />
+                    </Route>
 
-          <Navigation />
+                    <Route path="/add-exercise">
+                        <AddExercisePage />
+                    </Route>
 
-          <main>
-            <Route path="/" exact>
-              <HomePage setMovie={setMovie} />
-            </Route>
+                    <Route path="/edit-exercise">
+                        <EditExercisePage exercise={exercise} />
+                    </Route>
+                </main>
 
-            <Route path="/add-movie">
-              <AddMoviePage />
-            </Route>
-            
-            <Route path="/edit-movie">
-              <EditMoviePage movie={movie} />
-            </Route>
-          </main>
-
-          <footer>
-            <p>Copyright statement</p>
-          </footer>
-
-      </Router>
-    </>
-  );
+                <footer>
+                    <p>Copyright statement</p>
+                </footer>
+            </Router>
+        </>
+    );
 }
 
 export default App;

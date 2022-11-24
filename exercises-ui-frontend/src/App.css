@@ -158,14 +158,15 @@ table {
   border-collapse: collapse;
   margin-bottom: 5%;
   color: var(--dark-background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 caption {}
 thead {
   height: 30px;
-  background-color: var(--accent-green);
+  background-color: var(--dark-background);
+  color: var(--light-background);
 }
-tbody {
-}
+tbody {}
 tfoot {}
 tr {}
   tr:nth-child(even) {
@@ -173,12 +174,14 @@ tr {}
   }
   tr:nth-child(odd) {
 
-
   }
-th {}
+th {
+  font-weight: 500;
+  color: var(--light-background);
+}
 tr td {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
 }

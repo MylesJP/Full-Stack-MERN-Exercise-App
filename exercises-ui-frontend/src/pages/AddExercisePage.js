@@ -30,7 +30,7 @@ export const AddExercisePage = () => {
     return (
         <>
             <article>
-                <h2>Add to the collection</h2>
+                <h2>Add an Exercise</h2>
                 <p>Add a weight, bodyweight, or cardio exercise below.</p>
                 <form
                     onSubmit={(e) => {
@@ -38,8 +38,9 @@ export const AddExercisePage = () => {
                     }}
                 >
                     <fieldset>
-                        <legend>Which exercise are you adding?</legend>
-                        <label for="title">Exercise name</label>
+                        <label for="name" class="name-flex">
+                            Name
+                        </label>
                         <input
                             type="text"
                             placeholder="Name"
@@ -49,7 +50,9 @@ export const AddExercisePage = () => {
                             required
                         />
 
-                        <label for="reps">Reps</label>
+                        <label for="reps" class="reps-flex">
+                            Reps
+                        </label>
                         <input
                             type="number"
                             value={reps}
@@ -61,7 +64,9 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="weight">Weight/Time</label>
+                        <label for="weight" class="weight-flex">
+                            Weight/Time
+                        </label>
                         <input
                             type="number"
                             placeholder="Weight"
@@ -73,7 +78,9 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="unit">Unit</label>
+                        <label for="unit" class="unit-flex">
+                            Unit
+                        </label>
                         <select
                             type="text"
                             placeholder="Unit"
@@ -92,14 +99,15 @@ export const AddExercisePage = () => {
                             <option value="count">count</option>
                         </select>
 
-                        <label for="date">Date</label>
+                        <label for="date" class="date-flex">
+                            Date
+                        </label>
                         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" required />
 
                         <label for="submit">
                             <button type="submit" onClick={addExercise} id="submit">
                                 Add
-                            </button>{" "}
-                            to the collection
+                            </button>
                         </label>
                     </fieldset>
                 </form>

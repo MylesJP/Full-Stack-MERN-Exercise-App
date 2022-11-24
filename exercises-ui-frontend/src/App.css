@@ -39,7 +39,7 @@ body {       /* Can alternatively define in html {} or :root {} */
   background-color: var(--dark-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size:;
-  margin: 5%;
+  margin: 7%;
   padding:;
 }
 
@@ -88,7 +88,7 @@ main {
     color: var(--dark-background);
     align-items: center;
     text-align: center;
-    padding-top: 15px;
+    padding: 15px;
 }
 section {}
   article {}
@@ -98,7 +98,16 @@ section {}
     #gallery2 {}
 div {}
 aside {}
-footer {}
+footer {
+  color: lightgray;
+  font-size: smaller;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  vertical-align: bottom;
+}
 
 /*  -----  Typography  ----- */
 p {}
@@ -158,12 +167,22 @@ datalist {}
 
 
 /*  ----- Form ----- */
-form {}
+form {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-background);
+  margin: 5%;
+}
 fieldset {}
   legend {}
-label {}
+label {
+  padding: 5px
+}
   button {}
-  input {}
+  input {
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 3px;
+  }
   output {}
   meter {}
   progress {}
@@ -171,6 +190,14 @@ label {}
     optgroup {}
     option {}
   textarea {}
+
+#reps, #weight {
+  max-width: 75px;
+}
+
+#name {
+  max-width: 150px;
+}
 
 /* ----- Media ----- */
 figure {}

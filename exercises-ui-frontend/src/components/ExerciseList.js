@@ -4,7 +4,6 @@ import Exercise from "./Exercise";
 function ExerciseList({ exercises, onDelete, onEdit }) {
     return (
         <table id="exercises">
-            <caption>Add and Edit Exercises</caption>
             <thead>
                 <tr>
                     <th>Name</th>
@@ -12,6 +11,8 @@ function ExerciseList({ exercises, onDelete, onEdit }) {
                     <th>Weight/Time</th>
                     <th>Unit</th>
                     <th>Date</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

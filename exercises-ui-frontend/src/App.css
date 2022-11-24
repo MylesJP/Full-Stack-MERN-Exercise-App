@@ -151,15 +151,37 @@ del {}
 ins {}
 
 /*  ----- Table ----- */
-table {}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-collapse: collapse;
+  margin-bottom: 5%;
+  color: var(--dark-background);
+}
 caption {}
-thead {}
-tbody {}
+thead {
+  height: 30px;
+  background-color: var(--accent-green);
+}
+tbody {
+}
 tfoot {}
 tr {}
-  tr:nth-child(even) {}
+  tr:nth-child(even) {
+    background-color: var(--accent-green);
+  }
+  tr:nth-child(odd) {
+
+
+  }
 th {}
-td {}
+tr td {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
   td:nth-child(1) {}
 colgroup {}
 data {}
@@ -172,7 +194,8 @@ form {
   color: var(--dark-background);
   margin: 5%;
 }
-fieldset {}
+fieldset {
+}
   legend {}
 label {
   padding: 5px
@@ -181,15 +204,25 @@ label {
   input {
     margin-right: 15px;
     margin-bottom: 10px;
-    padding: 3px;
+    padding: 4px;
   }
   output {}
   meter {}
   progress {}
-  select {}
+  select {
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 4px;
+  }
     optgroup {}
     option {}
   textarea {}
+
+#submit {
+  color: inherit;
+  padding: 4px;
+  width: 75px;
+}
 
 #reps, #weight {
   max-width: 75px;

@@ -69,7 +69,7 @@ export const AddExercisePage = () => {
                         </label>
                         <input
                             type="number"
-                            placeholder="Weight"
+                            placeholder=""
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"

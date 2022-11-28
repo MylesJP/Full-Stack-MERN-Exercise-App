@@ -172,11 +172,11 @@ tfoot {}
 tr {}
   tr:nth-child(even) {
     background-color: var(--light-orange);
-    color: white
+    color: var(--almost-white)
   }
   tr:nth-child(odd) {
     background-color: var(--dark-orange);
-    color: white
+    color: var(--almost-white)
   }
 th {
   font-weight: 500;
@@ -190,7 +190,9 @@ tr td {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-  td:nth-child(1) {}
+  td:nth-child(1) {
+    text-align: left;
+  }
 colgroup {}
 data {}
 datalist {}
@@ -241,7 +243,7 @@ label {
 }
 
 #delete-button, #edit-button {
-  font-size: larger;
+  font-size: 22px;
 }
 
 #delete-button:hover, #edit-button:hover{

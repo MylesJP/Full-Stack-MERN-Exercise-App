@@ -11,8 +11,8 @@ function ExerciseList({ exercises, onDelete, onEdit }) {
                     <th>Weight/Time</th>
                     <th>Unit</th>
                     <th>Date</th>
-                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <tbody>

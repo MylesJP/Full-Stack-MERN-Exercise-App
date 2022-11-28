@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
 export const EditExercisePage = ({ exercise }) => {
-    const [name, setName] = useState("");
-    const [reps, setReps] = useState("");
-    const [weight, setWeight] = useState("");
-    const [unit, setUnit] = useState("");
+    const [name, setName] = useState(exercise.name);
+    const [reps, setReps] = useState(exercise.reps);
+    const [weight, setWeight] = useState(exercise.weight);
+    const [unit, setUnit] = useState(exercise.unit);
     const [date, setDate] = useState(exercise.date.toLocaleString("en-US").slice(0, 10));
 
     const history = useHistory();
@@ -37,22 +37,20 @@ export const EditExercisePage = ({ exercise }) => {
         <>
             <article>
                 <h2>Edit an exercise in the collection</h2>
-                <p>Paragraph about this page.</p>
+                <p>View, edit, and delete your exercises.</p>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
                     }}
                 >
                     <fieldset>
-                        <legend>Which exercise are you adding?</legend>
                         <label for="title">Name</label>
                         <input
                             type="text"
-                            placeholder="Name"
+                            placeholder={name}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             id="name"
-                            required
                         />
 
                         <label for="reps">Reps</label>
@@ -62,37 +60,29 @@ export const EditExercisePage = ({ exercise }) => {
                             placeholder="Reps"
                             onChange={(e) => setReps(e.target.value)}
                             id="reps"
-                            required
-                            default="1"
                             min="1"
                         />
 
-                        <label for="weight">Weight/Time</label>
+                        <label for="weight">Weight</label>
                         <input
                             type="number"
-                            placeholder=""
+                            placeholder="Weight"
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"
-                            required
-                            default="1"
                             min="1"
                         />
 
-                        <label for="unit" class="unit-flex">
-                            Unit
-                        </label>
+                        <label for="unit">Unit</label>
                         <select
                             type="text"
                             placeholder="Unit"
                             value={unit}
                             onChange={(e) => setUnit(e.target.value)}
                             id="unit"
-                            required
                         >
-                            <option value="lb" selected>
-                                lb
-                            </option>
+                            <option value="" selected></option>
+                            <option value="lb">lb</option>
                             <option value="kg">kg</option>
                             <option value="min">min</option>
                             <option value="km">km</option>
@@ -100,16 +90,19 @@ export const EditExercisePage = ({ exercise }) => {
                             <option value="count">count</option>
                         </select>
 
-                        <label for="date" class="date-flex">
-                            Date
-                        </label>
-                        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" required />
+                        <label for="date">Date</label>
+                        <input
+                            type="text"
+                            placeholder="Date"
+                            value={date}
+                            onChange={(e) => setDate(e.target.value)}
+                            id="date"
+                        />
 
                         <label for="submit">
                             <button onClick={editExercise} id="submit">
                                 Save
                             </button>{" "}
-                            updates to the collection
                         </label>
                     </fieldset>
                 </form>

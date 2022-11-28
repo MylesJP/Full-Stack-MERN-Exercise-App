@@ -129,7 +129,7 @@ content-type: application/json
 ### Request 12: UPDATE the fifth exercise with reps at 12 and unit at kgs (weight remains 20)
 ### CHANGE the value of ID in the following URL 
 ###        to the ID assigned to Deadlift with date 01-22-22.
-PUT http://localhost:3000/exercises/638510a809abde78cf6f86b3 HTTP/1.1
+PUT http://localhost:3000/exercises/63851c4f27836d053fa5fea7 HTTP/1.1
 content-type: application/json
 
 {
@@ -143,7 +143,7 @@ content-type: application/json
 ### Request 13: UPDATE with MISSING DATE property to get a 400 status code.
 ### Not working **********
 ### CHANGE the value of ID in the following URL to the ID assigned to Deadlift with date 01-22-22.
-PUT http://localhost:3000/exercises/638510a809abde78cf6f86b3 HTTP/1.1
+PUT http://localhost:3000/exercises/63851c4f27836d053fa5fea7 HTTP/1.1
 content-type: application/json
 
 {
@@ -158,7 +158,7 @@ content-type: application/json
 ### Not working **********
 ### CHANGE the value of ID in the following URL to the ID assigned
 ###     to Deadlift with date 01-25-22.
-PUT http://localhost:3000/exercises/637d5b61785f9fd6c3bb0455 HTTP/1.1
+PUT http://localhost:3000/exercises/63851c4f27836d053fa5fea7 HTTP/1.1
 content-type: application/json
 
 {
@@ -174,7 +174,7 @@ content-type: application/json
 ### Not working **********
 ### CHANGE the value of ID in the following URL to the ID assigned
 ###     to Deadlift with date 01-25-22.
-PUT  http://localhost:3000/exercises/62ec17b8c27f3d06547b7a2b HTTP/1.1
+PUT  http://localhost:3000/exercises/63851c4f27836d053fa5fea7 HTTP/1.1
 content-type: application/json
 
 {
@@ -207,7 +207,7 @@ GET  http://localhost:3000/exercises/62ec0d357984e67ef4eecd77 HTTP/1.1
 ### CHANGE the value of ID in the following URL to the ID assigned
 ###     to Deadlift with date 01-22-22. You can find that ID from the
 ##      previous retrieve request.
-DELETE http://localhost:3000/exercises/62ec17b8c27f3d06547b7a2b HTTP/1.1
+DELETE http://localhost:3000/exercises/63851c4f27836d053fa5fea7 HTTP/1.1
 
 
 ### Request 18: VERIFY that the Deadlift on 01-22-22 

@@ -26,16 +26,17 @@
 
 /*   ----- Variables  -----  */
 :root {
-  --dark-background: #1D2126;
-  --steel-blue: #68868C;
-  --light-steel-blue: #A8BBBF;
-  --light-background: #F2F2F2;
-  --accent-green: #A6A08D;
+  --dark-background: #348888;
+  --medium-blue: #22BABB;
+  --light-blue: #9EF8EE;
+  --almost-white: #F2F2F2;
+  --light-orange: #FA7F08;
+  --dark-orange:#F24405;
 }
 
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
-  color: var(--light-background);
+  color: var(--almost-white);
   background-color: var(--dark-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size:;
@@ -52,14 +53,14 @@ a:visited {}
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
-    background-color: var(--light-steel-blue);
+    background-color: var(--light-blue);
     color: var(--dark-background);
     text-align: center;
     padding: 20px;
 }
 
 nav a {
-    background-color: var(--light-background);
+    background-color: var(--medium-blue);
     color:var(--dark-background);
     text-decoration: none;
     margin: 30px;
@@ -68,23 +69,23 @@ nav a {
 }
 
 nav a:visited {
-    color:#1D2126;
+    color:white;
 }
 
 nav a:hover {
-    background-color: #E8E8E8;
+    background-color:var(--dark-background);
 }
 
 /*  ----- Page layout blocks -----  */
 header {
-     background-color: var(--steel-blue);
-     color: var(--light-background);
+     background-color: var(--medium-blue);
+     color: var(--almost-white);
      text-align: center;
      line-height: 15px;
      padding: 10px;
 }
 main {
-    background-color: var(--light-background);
+    background-color: var(--almost-white);
     color: var(--dark-background);
     align-items: center;
     text-align: center;
@@ -164,21 +165,24 @@ caption {}
 thead {
   height: 30px;
   background-color: var(--dark-background);
-  color: var(--light-background);
+  color: var(--almost-white);
 }
 tbody {}
 tfoot {}
 tr {}
   tr:nth-child(even) {
-    background-color: var(--accent-green);
+    background-color: var(--light-orange);
+    color: white
   }
   tr:nth-child(odd) {
-
+    background-color: var(--dark-orange);
+    color: white
   }
 th {
   font-weight: 500;
-  color: var(--light-background);
+  color: var(--almost-white);
   padding: 10px;
+  background-color: var(--dark-background);
 }
 tr td {
   padding-left: 25px;
@@ -234,6 +238,14 @@ label {
 
 #name {
   max-width: 150px;
+}
+
+#delete-button, #edit-button {
+  font-size: larger;
+}
+
+#delete-button:hover, #edit-button:hover{
+  cursor: pointer;
 }
 
 /* ----- Media ----- */

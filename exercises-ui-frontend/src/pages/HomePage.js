@@ -47,7 +47,7 @@ function HomePage({ setExercise }) {
         <>
             <article>
                 <h2>List of Exercises</h2>
-                <p>Paragraph about this page.</p>
+                <p>View, edit, and delete your exercises.</p>
                 <ExerciseList 
                     exercises={exercises} 
                     onEdit={onEditExercise} 

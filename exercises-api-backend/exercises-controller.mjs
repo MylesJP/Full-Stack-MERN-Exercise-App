@@ -15,7 +15,7 @@ app.post("/exercises", (req, res) => {
         })
         .catch((error) => {
             console.log(error);
-            res.status(400).json({ error: "Creation of a document failed due to invalid syntax." });
+            res.status(400).json({ error: "Creation of a document failed due to missing field." });
         });
 });
 

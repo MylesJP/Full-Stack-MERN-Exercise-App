@@ -20,7 +20,7 @@ export const AddExercisePage = () => {
             },
         });
         if (response.status === 201) {
-            alert("Successfully added the exercise!");
+            alert("Exercise added successfully.");
         } else {
             alert(`Failed to add exercise, status code = ${response.status}`);
         }
@@ -38,9 +38,7 @@ export const AddExercisePage = () => {
                     }}
                 >
                     <fieldset>
-                        <label for="name" class="name-flex">
-                            Name
-                        </label>
+                        <label for="name">Name</label>
                         <input
                             type="text"
                             placeholder="Name"
@@ -50,9 +48,7 @@ export const AddExercisePage = () => {
                             required
                         />
 
-                        <label for="reps" class="reps-flex">
-                            Reps
-                        </label>
+                        <label for="reps">Reps</label>
                         <input
                             type="number"
                             value={reps}
@@ -64,9 +60,7 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="weight" class="weight-flex">
-                            Weight/Time
-                        </label>
+                        <label for="weight">Weight</label>
                         <input
                             type="number"
                             placeholder=""
@@ -78,9 +72,7 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="unit" class="unit-flex">
-                            Unit
-                        </label>
+                        <label for="unit">Unit</label>
                         <select
                             type="text"
                             placeholder="Unit"
@@ -89,9 +81,8 @@ export const AddExercisePage = () => {
                             id="unit"
                             required
                         >
-                            <option value="lb" selected>
-                                lb
-                            </option>
+                            <option value="" selected></option>
+                            <option value="lb">lb</option>
                             <option value="kg">kg</option>
                             <option value="min">min</option>
                             <option value="km">km</option>

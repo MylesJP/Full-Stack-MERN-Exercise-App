@@ -7,7 +7,7 @@ content-type: application/json
     "reps": 10,
     "weight": 30,
     "unit": "lbs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 ### Request 2: CREATE second exercise Clean
@@ -19,7 +19,7 @@ content-type: application/json
     "reps": 12,
     "weight": 25,
     "unit": "kgs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 ### Request 3: CREATE third exercise Jerk
@@ -31,7 +31,7 @@ content-type: application/json
     "reps": 12,
     "weight": 30,
     "unit": "lbs",
-    "date": "01-25-22"
+    "date": "2022-11-24"
 }
 
 ### Request 4: CREATE fourth exercise Snatch
@@ -43,7 +43,7 @@ content-type: application/json
     "reps": 10,
     "weight": 30,
     "unit": "kgs",
-    "date": "01-25-22"
+    "date": "2022-11-24"
 }
 
 ### Request 5: CREATE fifth exercise Deadlift with
@@ -55,7 +55,7 @@ content-type: application/json
     "reps": 12,
     "weight": 25,
     "unit": "kgs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 ### Request 6: CREATE sixth exercise Deadlift with
@@ -67,7 +67,7 @@ content-type: application/json
     "name": "Deadlift",
     "weight": 25,
     "unit": "kgs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 ### Request 7: CREATE seventh exercise Deadlift with
@@ -79,7 +79,7 @@ content-type: application/json
     "name": "Deadlift",
     "reps": "12",
     "unit": "kgs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 ### Request 8: CREATE eighth exercise Deadlift with
@@ -91,7 +91,7 @@ content-type: application/json
     "name": "Deadlift",
     "reps": 12,
     "weight": 25,
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 
@@ -123,13 +123,13 @@ content-type: application/json
     "reps": 5,
     "weight": 20,
     "unit": "lbs",
-    "date": "01-22-22"
+    "date": "2022-11-24"
 }
 
 ### Request 12: UPDATE the fifth exercise with reps at 12 and unit at kgs (weight remains 20)
 ### CHANGE the value of ID in the following URL 
 ###        to the ID assigned to Deadlift with date 01-22-22.
-PUT http://localhost:3000/exercises/637d5b61785f9fd6c3bb0455 HTTP/1.1
+PUT http://localhost:3000/exercises/638510a809abde78cf6f86b3 HTTP/1.1
 content-type: application/json
 
 {
@@ -137,13 +137,13 @@ content-type: application/json
     "reps": 12,
     "weight": 20,
     "unit": "kgs",
-    "date": "01-22-22"
+    "date": "2022-11-24"
 }
 
 ### Request 13: UPDATE with MISSING DATE property to get a 400 status code.
 ### Not working **********
 ### CHANGE the value of ID in the following URL to the ID assigned to Deadlift with date 01-22-22.
-PUT http://localhost:3000/exercises/637d5b61785f9fd6c3bb0455 HTTP/1.1
+PUT http://localhost:3000/exercises/638510a809abde78cf6f86b3 HTTP/1.1
 content-type: application/json
 
 {
@@ -166,7 +166,7 @@ content-type: application/json
     "reps": "not a number",
     "weight": 1,
     "unit": "kgs",
-    "date": "01-18-22"
+    "date": "2022-11-24"
 }
 
 
@@ -195,7 +195,7 @@ content-type: application/json
     "reps": 12,
     "weight": 30,
     "unit": "lbs",
-    "date": "06-25-21"
+    "date": "2022-11-24"
 }
 
 

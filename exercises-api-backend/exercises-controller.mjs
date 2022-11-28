@@ -33,6 +33,7 @@ app.get("/exercises/:_id", (req, res) => {
             }
         })
         .catch((error) => {
+            console.log(error);
             res.status(400).json({ Error: "Request to retrieve document failed" });
         });
 });

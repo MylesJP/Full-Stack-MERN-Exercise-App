@@ -178,6 +178,7 @@ tr {}
 th {
   font-weight: 500;
   color: var(--light-background);
+  padding: 10px;
 }
 tr td {
   padding-left: 25px;

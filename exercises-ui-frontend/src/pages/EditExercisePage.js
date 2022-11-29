@@ -36,8 +36,8 @@ export const EditExercisePage = ({ exercise }) => {
     return (
         <>
             <article>
-                <h2>Edit an exercise in the collection</h2>
-                <p>View, edit, and delete your exercises.</p>
+                <h2>Edit an Exercise</h2>
+                <p>Edit the selected exercise below.</p>
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();

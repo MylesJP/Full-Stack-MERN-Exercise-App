@@ -64,8 +64,9 @@ nav a {
     background-color: var(--medium-blue);
     color:var(--dark-background);
     text-decoration: none;
-    vertical-align: center;
-    margin: 30px;
+    line-height: 0px;
+    vertical-align:middle;
+    margin: 35px;
     padding: 8px 20px;
     font-weight: bold;
     border:#348888;

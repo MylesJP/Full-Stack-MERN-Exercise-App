@@ -45,7 +45,6 @@ export const AddExercisePage = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             id="name"
-                            required
                         />
 
                         <label for="reps">Reps</label>
@@ -55,7 +54,6 @@ export const AddExercisePage = () => {
                             placeholder="Reps"
                             onChange={(e) => setReps(e.target.value)}
                             id="reps"
-                            required
                             min="1"
                         />
 
@@ -66,12 +64,11 @@ export const AddExercisePage = () => {
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"
-                            required
                             min="1"
                         />
 
                         <label for="unit">Unit</label>
-                        <select type="text" value={unit} onChange={(e) => setUnit(e.target.value)} id="unit" required>
+                        <select type="text" value={unit} onChange={(e) => setUnit(e.target.value)} id="unit">
                             <option value=""></option>
                             <option value="lb">lb</option>
                             <option value="kg">kg</option>
@@ -84,7 +81,7 @@ export const AddExercisePage = () => {
                         <label for="date" class="date-flex">
                             Date
                         </label>
-                        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" required />
+                        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" />
 
                         <label for="submit">
                             <button type="submit" onClick={addExercise} id="submit">

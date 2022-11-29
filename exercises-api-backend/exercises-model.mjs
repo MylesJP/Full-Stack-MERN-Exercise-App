@@ -18,8 +18,8 @@ db.once("open", (err) => {
 // SCHEMA: Define the collection's schema.
 const exerciseSchema = mongoose.Schema({
     name: { type: String, required: true },
-    reps: { type: Number, required: true },
-    weight: { type: Number, required: true },
+    reps: { type: Number, required: true, min: 1 },
+    weight: { type: Number, required: true, min: 1 },
     unit: { type: String, required: true },
     date: { type: Date, min: "001-01-2021", default: new Date(), required: true },
 });

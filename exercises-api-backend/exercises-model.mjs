@@ -60,6 +60,9 @@ const deleteById = async (_id) => {
 
 // REPLACE model *****************************************************
 const replaceExercise = async (_id, name, reps, weight, unit, date) => {
+    if (reps > 0 && weight > 0) {
+        console.log("valid update");
+    }
     const result = await Exercise.replaceOne(
         { _id: _id },
         {

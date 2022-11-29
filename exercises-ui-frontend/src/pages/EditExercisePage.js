@@ -45,7 +45,7 @@ export const EditExercisePage = ({ exercise }) => {
                     }}
                 >
                     <fieldset>
-                        <label for="title">Name</label>
+                        <label htmlFor="title">Name</label>
                         <input
                             type="text"
                             placeholder={name}
@@ -54,7 +54,7 @@ export const EditExercisePage = ({ exercise }) => {
                             id="name"
                         />
 
-                        <label for="reps">Reps</label>
+                        <label htmlFor="reps">Reps</label>
                         <input
                             type="number"
                             value={reps}
@@ -64,7 +64,7 @@ export const EditExercisePage = ({ exercise }) => {
                             min="1"
                         />
 
-                        <label for="weight">Weight/Time</label>
+                        <label htmlFor="weight">Weight/Time</label>
                         <input
                             type="number"
                             placeholder="Reps"
@@ -74,7 +74,7 @@ export const EditExercisePage = ({ exercise }) => {
                             min="1"
                         />
 
-                        <label for="unit">Unit</label>
+                        <label htmlFor="unit">Unit</label>
                         <select
                             type="text"
                             placeholder="Unit"
@@ -82,7 +82,7 @@ export const EditExercisePage = ({ exercise }) => {
                             onChange={(e) => setUnit(e.target.value)}
                             id="unit"
                         >
-                            <option value="" selected></option>
+                            <option value=""></option>
                             <option value="lb">lb</option>
                             <option value="kg">kg</option>
                             <option value="min">min</option>
@@ -91,7 +91,7 @@ export const EditExercisePage = ({ exercise }) => {
                             <option value="count">count</option>
                         </select>
 
-                        <label for="date">Date</label>
+                        <label htmlFor="date">Date</label>
                         <input
                             type="text"
                             placeholder="Date"
@@ -100,7 +100,7 @@ export const EditExercisePage = ({ exercise }) => {
                             id="date"
                         />
 
-                        <label for="submit">
+                        <label htmlFor="submit">
                             <button onClick={editExercise} id="submit">
                                 Save
                             </button>{" "}

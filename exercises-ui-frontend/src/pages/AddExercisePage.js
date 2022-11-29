@@ -38,7 +38,7 @@ export const AddExercisePage = () => {
                     }}
                 >
                     <fieldset>
-                        <label for="name">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input
                             type="text"
                             placeholder="Name"
@@ -47,7 +47,7 @@ export const AddExercisePage = () => {
                             id="name"
                         />
 
-                        <label for="reps">Reps</label>
+                        <label htmlFor="reps">Reps</label>
                         <input
                             type="number"
                             value={reps}
@@ -57,7 +57,7 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="weight">Weight/Time</label>
+                        <label htmlFor="weight">Weight/Time</label>
                         <input
                             type="number"
                             placeholder="Weight"
@@ -67,7 +67,7 @@ export const AddExercisePage = () => {
                             min="1"
                         />
 
-                        <label for="unit">Unit</label>
+                        <label htmlFor="unit">Unit</label>
                         <select type="text" value={unit} onChange={(e) => setUnit(e.target.value)} id="unit">
                             <option value=""></option>
                             <option value="lb">lb</option>
@@ -78,12 +78,10 @@ export const AddExercisePage = () => {
                             <option value="count">count</option>
                         </select>
 
-                        <label for="date" class="date-flex">
-                            Date
-                        </label>
+                        <label htmlFor="date">Date</label>
                         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} id="date" />
 
-                        <label for="submit">
+                        <label htmlFor="submit">
                             <button type="submit" onClick={addExercise} id="submit">
                                 Add
                             </button>

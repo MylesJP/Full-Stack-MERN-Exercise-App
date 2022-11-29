@@ -71,27 +71,38 @@ app.delete("/exercises/:_id", (req, res) => {
 
 // UPDATE controller ************************************
 app.put("/exercises/:_id", (req, res) => {
-    exercises
-        .replaceExercise(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
+    if (req.body.reps > 0 && req.body.weight > 0) {
+        exercises
+            .replaceExercise(
+                req.params._id,
+                req.body.name,
+                req.body.reps,
+                req.body.weight,
+                req.body.unit,
+                req.body.date
+            )
 
-        .then((numUpdated) => {
-            if (numUpdated === 1) {
-                res.json({
-                    _id: req.params._id,
-                    name: req.body.name,
-                    reps: req.body.reps,
-                    weight: req.body.weight,
-                    unit: req.body.unit,
-                    date: req.body.date,
-                });
-            } else {
-                res.status(404).json({ Error: "Exercise not found" });
-            }
-        })
-        .catch((error) => {
-            console.error(error);
-            res.status(400).json({ Error: "Request to update an exercise failed" });
-        });
+            .then((numUpdated) => {
+                if (numUpdated === 1) {
+                    res.json({
+                        _id: req.params._id,
+                        name: req.body.name,
+                        reps: req.body.reps,
+                        weight: req.body.weight,
+                        unit: req.body.unit,
+                        date: req.body.date,
+                    });
+                } else {
+                    res.status(404).json({ Error: "Exercise not found." });
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                res.status(400).json({ Error: "Request to update an exercise failed." });
+            });
+    } else {
+        res.status(400).json({ Error: "Make sure weight and reps are greater than 0." });
+    }
 });
 
 app.listen(PORT, () => {

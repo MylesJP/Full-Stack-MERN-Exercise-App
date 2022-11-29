@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useState } from "react";
+import { CgGym } from "react-icons/cg"
 
 // Import Components, styles, media
 import Navigation from "./components/Navigation";
@@ -20,7 +21,7 @@ function App() {
         <>
             <Router>
                 <header>
-                    <h1>Exercise Tracker</h1>
+                    <h1>Exercise Tracker <CgGym id="gym-icon"/></h1>
                     <p>Track your exercises with this MERN app!</p>
                 </header>
 

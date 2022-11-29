@@ -63,7 +63,7 @@ export const AddExercisePage = () => {
                         <label for="weight">Weight</label>
                         <input
                             type="number"
-                            placeholder=""
+                            placeholder="1"
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"
@@ -75,13 +75,12 @@ export const AddExercisePage = () => {
                         <label for="unit">Unit</label>
                         <select
                             type="text"
-                            placeholder="Unit"
                             value={unit}
                             onChange={(e) => setUnit(e.target.value)}
                             id="unit"
                             required
                         >
-                            <option value="" selected></option>
+                            <option value=""></option>
                             <option value="lb">lb</option>
                             <option value="kg">kg</option>
                             <option value="min">min</option>

@@ -39,9 +39,10 @@ body {       /* Can alternatively define in html {} or :root {} */
   color: var(--almost-white);
   background-color: var(--dark-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:;
-  margin: 7%;
-  padding:;
+  margin: 10%;
+  font-size: medium;
+  padding: 5px;
+  min-width: 900px;
 }
 
 /* ----- Anchors ----- Text links */
@@ -63,9 +64,14 @@ nav a {
     background-color: var(--medium-blue);
     color:var(--dark-background);
     text-decoration: none;
+    vertical-align: center;
     margin: 30px;
     padding: 8px 20px;
-    font-weight: bold
+    font-weight: bold;
+    border:#348888;
+    border-width: 1px;
+    border-radius: 15px;
+    font-weight: 500;
 }
 
 nav a:visited {
@@ -74,6 +80,7 @@ nav a:visited {
 
 nav a:hover {
     background-color:var(--dark-background);
+    text-decoration: underline;
 }
 
 /*  ----- Page layout blocks -----  */
@@ -87,6 +94,9 @@ header {
 main {
     background-color: var(--almost-white);
     color: var(--dark-background);
+    border: var(--light-blue);
+    border-width: 7px;
+    border-style: solid;
     align-items: center;
     text-align: center;
     padding: 15px;
@@ -155,11 +165,13 @@ ins {}
 table {
   margin-left: auto;
   margin-right: auto;
+  border:var(--dark-background);
   border-style: solid;
   border-collapse: collapse;
   margin-bottom: 5%;
   color: var(--dark-background);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 800px
 }
 caption {}
 thead {
@@ -181,17 +193,21 @@ tr {}
 th {
   font-weight: 500;
   color: var(--almost-white);
-  padding: 10px;
+  padding: 12px;
   background-color: var(--dark-background);
 }
 tr td {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin: 3px;
 }
   td:nth-child(1) {
     text-align: left;
+  }
+  td:nth-child(5) {
+    width: 150px
   }
 colgroup {}
 data {}
@@ -214,7 +230,8 @@ label {
   input {
     margin-right: 15px;
     margin-bottom: 10px;
-    padding: 4px;
+    padding: 5px;
+    color: var(--dark-background);
   }
   output {}
   meter {}
@@ -222,7 +239,8 @@ label {
   select {
     margin-right: 15px;
     margin-bottom: 10px;
-    padding: 4px;
+    padding: 5px;
+    color:var(--dark-background)
   }
     optgroup {}
     option {}
@@ -250,6 +268,9 @@ label {
   cursor: pointer;
 }
 
+#gym-icon {
+  font-size: 32px;
+}
 /* ----- Media ----- */
 figure {}
   figcaption {}

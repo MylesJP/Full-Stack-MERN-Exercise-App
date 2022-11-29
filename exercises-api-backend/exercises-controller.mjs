@@ -15,7 +15,7 @@ app.post("/exercises", (req, res) => {
         })
         .catch((error) => {
             console.log(error);
-            res.status(400).json({ error: "Creation of a document failed due to missing field." });
+            res.status(400).json({ error: "Failed to add exercise. Ensure all fields are filled out." });
         });
 });
 
@@ -29,12 +29,12 @@ app.get("/exercises/:_id", (req, res) => {
             if (exercise !== null) {
                 res.json(exercise);
             } else {
-                res.status(404).json({ Error: "Document not found" });
+                res.status(404).json({ Error: "Exercise not found" });
             }
         })
         .catch((error) => {
             console.log(error);
-            res.status(400).json({ Error: "Request to retrieve document failed" });
+            res.status(400).json({ Error: "Request to retrieve exercise failed" });
         });
 });
 
@@ -48,7 +48,7 @@ app.get("/exercises", (req, res) => {
         })
         .catch((error) => {
             console.error(error);
-            res.send({ Error: "Request to retrieve documents failed" });
+            res.send({ Error: "Request to retrieve exercises failed" });
         });
 });
 
@@ -60,12 +60,12 @@ app.delete("/exercises/:_id", (req, res) => {
             if (deletedCount === 1) {
                 res.status(204).send();
             } else {
-                res.status(404).json({ Error: "Document not found" });
+                res.status(404).json({ Error: "Exercise not found" });
             }
         })
         .catch((error) => {
             console.error(error);
-            res.send({ error: "Request to delete a document failed" });
+            res.send({ error: "Request to delete an exercise failed" });
         });
 });
 
@@ -85,12 +85,12 @@ app.put("/exercises/:_id", (req, res) => {
                     date: req.body.date,
                 });
             } else {
-                res.status(404).json({ Error: "Document not found" });
+                res.status(404).json({ Error: "Exercise not found" });
             }
         })
         .catch((error) => {
             console.error(error);
-            res.status(400).json({ Error: "Request to update a document failed" });
+            res.status(400).json({ Error: "Request to update an exercise failed" });
         });
 });
 

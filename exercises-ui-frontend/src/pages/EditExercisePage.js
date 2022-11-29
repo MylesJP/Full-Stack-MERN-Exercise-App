@@ -25,10 +25,10 @@ export const EditExercisePage = ({ exercise }) => {
         });
 
         if (response.status === 200) {
-            alert("Successfully edited document!");
+            alert("Edit successful.");
         } else {
             const errMessage = await response.json();
-            alert(`Failed to update document. Status ${response.status}. ${errMessage.Error}`);
+            alert(`Update failed. Status ${response.status}. ${errMessage.Error}`);
         }
         history.push("/");
     };

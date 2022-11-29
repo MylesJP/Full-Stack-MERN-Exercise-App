@@ -30,6 +30,7 @@ export const EditExercisePage = ({ exercise }) => {
             const errMessage = await response.json();
             alert(`Update failed. Status ${response.status}. ${errMessage.Error}`);
         }
+
         history.push("/");
     };
 

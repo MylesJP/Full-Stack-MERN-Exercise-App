@@ -63,10 +63,10 @@ export const EditExercisePage = ({ exercise }) => {
                             min="1"
                         />
 
-                        <label for="weight">Weight</label>
+                        <label for="weight">Weight/Time</label>
                         <input
                             type="number"
-                            placeholder="Weight"
+                            placeholder="Reps"
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"

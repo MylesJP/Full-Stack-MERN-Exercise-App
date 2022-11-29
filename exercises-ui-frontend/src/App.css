@@ -229,6 +229,7 @@ label {
 }
   button {}
   input {
+    width: 150px;
     margin-right: 15px;
     margin-bottom: 10px;
     padding: 5px;
@@ -249,12 +250,18 @@ label {
 
 #submit {
   color: inherit;
-  padding: 4px;
+  padding: 5px;
   width: 75px;
+  font-weight: 500;
+}
+
+#submit:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #reps, #weight {
-  max-width: 75px;
+  max-width: 80px;
 }
 
 #name {

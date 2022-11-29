@@ -56,30 +56,22 @@ export const AddExercisePage = () => {
                             onChange={(e) => setReps(e.target.value)}
                             id="reps"
                             required
-                            default="1"
                             min="1"
                         />
 
-                        <label for="weight">Weight</label>
+                        <label for="weight">Weight/Time</label>
                         <input
                             type="number"
-                            placeholder="1"
+                            placeholder="Weight"
                             value={weight}
                             onChange={(e) => setWeight(e.target.value)}
                             id="weight"
                             required
-                            default="1"
                             min="1"
                         />
 
                         <label for="unit">Unit</label>
-                        <select
-                            type="text"
-                            value={unit}
-                            onChange={(e) => setUnit(e.target.value)}
-                            id="unit"
-                            required
-                        >
+                        <select type="text" value={unit} onChange={(e) => setUnit(e.target.value)} id="unit" required>
                             <option value=""></option>
                             <option value="lb">lb</option>
                             <option value="kg">kg</option>
